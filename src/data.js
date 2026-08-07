@@ -1,6 +1,7 @@
 export const person = {
   name: 'Hiremut Sai Kshitij',
   role: 'B.Tech Computer Science & Information Technology Student',
+  photo: '/media/profile.jpg',
   email: 'kshitij.sai@gmail.com',
   phone: '9392109081',
   phoneHref: 'tel:+919392109081',
@@ -90,13 +91,13 @@ export const certificates = [
     name: 'NPTEL — Programming in Python',
     issuer: 'SWAYAM NPTEL · December 2024',
     detail: 'Completed the certified programming course with distinction',
-    media: [],
+    media: ['/media/certificates/nptel-python.jpeg'],
   },
   {
     name: 'NPTEL — Programming in Java',
     issuer: 'SWAYAM NPTEL · April 2025',
     detail: 'Completed the certified programming course with distinction',
-    media: [],
+    media: ['/media/certificates/nptel-java.jpeg'],
   },
   {
     name: 'QSpider Training Certification',
@@ -127,6 +128,7 @@ export const achievements = [
     media: [
       '/media/achievements/desire4travels-1.jpeg',
       '/media/achievements/desire4travels-2.jpeg',
+      '/media/achievements/desire4travels-3.mp4',
     ],
   },
   {

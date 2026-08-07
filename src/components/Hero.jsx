@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
         <div className="hero-card-wrap reveal" style={{ '--d': '300ms' }}>
           <div className="hero-card">
-            <div className="hero-avatar">SK</div>
+            <img className="hero-avatar" src={person.photo} alt={`${person.name} profile`} />
             <h3>{person.name}</h3>
             <p className="sub">B.Tech CSIT · MVSR</p>
             <div className="hero-card-actions">
