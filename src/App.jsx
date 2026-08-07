@@ -25,7 +25,7 @@ function App() {
           }
         }
       },
-      { threshold: 0.35 }
+      { threshold: 0.05 }
     )
     slides.forEach((s) => observer.observe(s))
     return () => observer.disconnect()

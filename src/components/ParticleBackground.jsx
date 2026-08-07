@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 
 export default function ParticleBackground({
-  primary = '#22d3ee',
-  lineColor = 'rgba(129, 140, 248, 0.35)',
+  primary = '#818cf8',
+  lineColor = 'rgba(129, 140, 248, 0.24)',
   linkDistance = 130,
 }) {
   const canvasRef = useRef(null)
@@ -66,7 +66,7 @@ export default function ParticleBackground({
 
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(165, 180, 252, 0.9)'
+        ctx.fillStyle = 'rgba(148, 163, 184, 0.5)'
         ctx.fill()
       }
 
@@ -78,12 +78,12 @@ export default function ParticleBackground({
           const dy = a.y - b.y
           const d = Math.hypot(dx, dy)
           if (d < linkDistance) {
-            const alpha = (1 - d / linkDistance) * 0.45
+            const alpha = (1 - d / linkDistance) * 0.35
             ctx.beginPath()
             ctx.moveTo(a.x, a.y)
             ctx.lineTo(b.x, b.y)
-            ctx.strokeStyle = alpha > 0.2 ? `rgba(56, 189, 248, ${alpha})` : `rgba(99, 102, 241, ${alpha})`
-            ctx.lineWidth = 0.8
+            ctx.strokeStyle = `rgba(129, 140, 248, ${alpha})`
+            ctx.lineWidth = 0.7
             ctx.stroke()
           }
         }
@@ -96,8 +96,8 @@ export default function ParticleBackground({
             ctx.beginPath()
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(mouse.x, mouse.y)
-            ctx.strokeStyle = `rgba(34, 211, 238, ${(1 - d / 160) * 0.6})`
-            ctx.lineWidth = 1
+            ctx.strokeStyle = `rgba(165, 180, 252, ${(1 - d / 160) * 0.4})`
+            ctx.lineWidth = 0.8
             ctx.stroke()
           }
         }
